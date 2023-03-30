@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <title>Drag Sort List</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <style>
+    .item-list {
+      border-collapse: collapse;
+    }
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 64px;
+      background-color: #FFF;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      user-select: none;
+    }
+  </style>
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <div class="item-list">
+    <div class="item">zzn</div>
+    <div class="item">lmy</div>
+    <div class="item">lxc</div>
+  </div>
+
+  <script>
+    const itemList = document.querySelector('.item-list');
+    // usage
+    const dragSortList = new DragSortList(itemList, (res) => console.log(res));
+  </script>
+</body>
+
+</html>
